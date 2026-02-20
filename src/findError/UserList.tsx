@@ -47,6 +47,7 @@ export const useFetch = () => {
 
   useEffect(() => {
     let isMounted = true
+    const controller = new AbortController()
     const fetchUsersData = async () => {
       setLoading(true)
       setError(null)
@@ -69,6 +70,7 @@ export const useFetch = () => {
 
     return () => {
       isMounted = false
+      controller.abort()
     }
   }, [])
 

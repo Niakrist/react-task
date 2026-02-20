@@ -3,4 +3,6 @@
 // - `data`
 // - `loading`
 // - `error`
-// const { data, loading, error } = useFetch('/api/posts');
+// - refetch
+
+// const { data, loading, error, refetch } = useFetch('/api/posts');

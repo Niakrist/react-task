@@ -5,6 +5,8 @@ export const useFetch = (url: string) => {
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<Error | null>(null)
 
+  const [refetch, setRefetch] = useState<null>(null)
+
   useEffect(() => {
     // Борется с race conditions (гонкой запросов)
     // Запрос к /posts (медленный, 3 сек)
@@ -66,5 +68,5 @@ export const useFetch = (url: string) => {
     }
   }, [url])
 
-  return { data, loading, error }
+  return { data, loading, error, refetch }
 }

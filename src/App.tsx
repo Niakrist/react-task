@@ -5,6 +5,7 @@ import MyApp from './tasks/memoization/Memoization'
 
 import { MyUseCallback } from './tasks/useCallback/useCallback'
 import { WithoutDeps } from './tasks/without-deps/WithoutDeps'
+import './App.css'
 
 function App() {
   return (
@@ -14,7 +15,9 @@ function App() {
       {/* <WithoutDeps /> */}
       {/* <ClearTimer /> */}
       {/* <MyUseCallback /> */}
-      <MyApp />
+      {/* <MyApp /> */}
+
+      <button className='button'>button</button>
     </>
   )
 }

@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react'
 
-interface IUser {
-  name: string
-}
+
 
 export const useFetch = (url: string) => {
-  const [user, setUser] = useState<IUser | null>(null)
+  const [user, setUser] = useState(null)
 
   useEffect(() => {
     fetch(url)
